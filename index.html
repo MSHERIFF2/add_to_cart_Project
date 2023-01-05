@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add_To_Cart</title>
+    <link rel="stylesheet" href="cart.css">
+    <style>
+     
+     
+    </style>
+</head>
+<body>
+   <h1>CODESH TECH MARKET</h1>
+   <div class="bigContainer">
+      
+      <div class="container">
+         
+         <div class="item_container">
+            <img src="lg.jpg" alt="plasma TV">
+            <p >LG 42 inch</p>
+            <p >Price: <span id="plasma_P"><span>$</span>5000</span></p>
+            <button onclick="Add_to_Cart_Lg()">Add to Cart</button><br>
+            <img src="radio.jpg" alt="plasma TV">
+            <p >Codesh Micor_Pro</p>
+            <p >Price: <span id="radio_P">$1000</span></p>
+            <button onclick="Add_to_Cart_radio()">Add to Cart</button>
+         </div>
+      </div>
+      <hr>
+      <div class="cart_container">
+            <h1>Cart order Payment Status</h1>
+            <p id="lg"></p><br>
+            <p id="radio"></p>
+      </div>
+   </div>
+   <script>
+      function Add_to_Cart_Lg(){
+         document.getElementById('lg').innerHTML ="Item Type :" + price[0].Item_Type + "<br>" +
+         "Price:$"+price[0].Price + "<br>" + "Status: Pending"
+      }
+      function Add_to_Cart_radio(){
+         document.getElementById('radio').innerHTML ="Item Type :" + price[1].Item_Type + "<br>" +
+         "Price:$"+price[1].Price + "<br>" + "Status: Pending"
+      }
+      var price =[
+         {
+         Item_Type: "LG 42 inch",
+         Price: "$5000"
+      },
+         {
+         Item_Type: "Codesh Micor_Pro",
+         Price: "$1000",
+      }
+   ]
+
+   </script>
+     
+</body>
+</html>
